@@ -21,7 +21,7 @@ def calculate_kendall_tau(expert_opinions):
 
     return dispersion_opinions / dispersion_eta
 
-def perform_analysis():
+def task():
     A = ["O1", "O2", "O3"]
     B = ["O1", "O3", "O2"]
     C = ["O1", "O3", "O2"]
@@ -29,7 +29,7 @@ def perform_analysis():
     expert_views = [A, B, C]
 
     result = calculate_kendall_tau(expert_views)
-    print(result)
+    return result
 
 if __name__ == "__main__":
-    perform_analysis()
+    print(task())
