@@ -84,16 +84,16 @@ def item_in_conflict_zone(item, zones):
             return True, zone
     return False, []
 
-def analyze_expert_rankings():
+def task():
     expert_A = [1,[2,3],4,[5,6,7],8,9,10]
     expert_B = [[1,2],[3,4,5,],6,7,9,[8,10]]
     matrix_A = create_preference_matrix(expert_A)
     matrix_B = create_preference_matrix(expert_B)
     conflicts_AB = find_disagreements(matrix_A, matrix_B)
     merged_AB = merge_expert_opinions(expert_A, expert_B, conflicts_AB)
-    print(merged_AB)
+    return merged_AB
 
 
 
 if __name__ == '__main__':
-    analyze_expert_rankings()
+    print(task())
